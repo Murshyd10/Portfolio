@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Murshid | Junior Software Developer (.NET &amp; Backend Engineer)</title>
+  <meta name="description" content="Portfolio of Murshid — Driven .NET Software Developer specializing in C#, ASP.NET Core, SQL Server, custom POS &amp; billing systems, and legacy codebase modernization." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Background Ambient Glow -->
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+  </div>
+
+  <!-- Sticky Navigation Header -->
+  <header class="site-header" id="top">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo" aria-label="Murshid Home">
+        <span class="brand-mark">M</span>
+        <span class="brand-text">Murshid<span class="brand-dot">.dev</span></span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#skills" class="nav-link">Skills &amp; Expertise</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#contact" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme" title="Toggle Dark/Light Theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="assets/Murshid_Resume.pdf" download="Murshid_Resume.pdf" class="btn btn-outline btn-sm">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>Resume</span>
+        </a>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Toggle Menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <div class="availability-pill">
+            <span class="status-dot"></span>
+            <span>Junior Software Developer &bull; .NET &amp; SQL Server Specialist</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="text-gradient">Murshid</span>.<br />
+            Building High-Performing <span class="text-accent">.NET &amp; Business Systems</span>
+          </h1>
+
+          <p class="hero-description">
+            Driven <strong>.NET Developer</strong> with proven experience designing and scaling desktop management,
+            Point of Sale (POS), billing, and accounting systems. Skilled in building clean, maintainable backend
+            services using <strong>C#</strong>, <strong>ASP.NET Core</strong>, and <strong>SQL Server</strong>, and
+            modernizing legacy codebases into reliable software.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Projects</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            <a href="assets/Murshid_Resume.pdf" target="_blank" rel="noopener" class="btn btn-ghost">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+              <span>Download CV</span>
+            </a>
+          </div>
+
+          <div class="hero-quick-info">
+            <div class="quick-item">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Pattambi, Palakkad, Kerala</span>
+            </div>
+            <div class="quick-item">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+              <span>Techzera Infologics Pvt Ltd</span>
+            </div>
+            <div class="quick-item">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+              <span>MCA Graduate (2024)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="profile-card-wrapper">
+            <div class="profile-ring"></div>
+            <div class="profile-image-frame">
+              <img src="assets/profile.png" alt="Murshid — Junior Software Developer" class="profile-photo" />
+            </div>
+
+            <div class="floating-badge badge-top-left">
+              <span class="badge-icon">C#</span>
+              <div>
+                <strong>ASP.NET Core</strong>
+                <small>Backend Architecture</small>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-bottom-right">
+              <span class="badge-icon sql-icon">SQL</span>
+              <div>
+                <strong>SQL Server</strong>
+                <small>POS &amp; Billing Data</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Metrics Highlight Bar -->
+      <div class="container">
+        <div class="stats-banner reveal">
+          <div class="stat-box">
+            <span class="stat-number">.NET</span>
+            <span class="stat-label">Core &amp; Desktop Systems</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-box">
+            <span class="stat-number">6+</span>
+            <span class="stat-label">Enterprise &amp; Academic Projects</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-box">
+            <span class="stat-number">MCA</span>
+            <span class="stat-label">Master of Computer Applications</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-box">
+            <span class="stat-number">4</span>
+            <span class="stat-label">Languages Spoken Fluently</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SKILLS & EXPERTISE SECTION ==================== -->
+    <section class="skills-section section" id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Skills &amp; Expertise</span>
+          <h2 class="section-title">Technical Stack &amp; Professional Background</h2>
+          <p class="section-subtitle">
+            Combining strong C# / .NET backend engineering and relational database management with disciplined problem-solving.
+          </p>
+        </div>
+
+        <!-- 3-Column Skills Grid -->
+        <div class="skills-grid">
+          <!-- Languages & Frameworks -->
+          <article class="skill-category-card reveal">
+            <div class="skill-card-head">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h3>Languages &amp; Frameworks</h3>
+                <p>Core technologies for backend &amp; web</p>
+              </div>
+            </div>
+
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>C# &amp; .NET / ASP.NET Core</span>
+                  <span class="skill-level">Advanced</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill" style="width: 92%"></div></div>
+              </div>
+
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>SQL (T-SQL / Queries &amp; Schemas)</span>
+                  <span class="skill-level">Advanced</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill" style="width: 88%"></div></div>
+              </div>
+
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>HTML5 &amp; CSS3</span>
+                  <span class="skill-level">Proficient</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill" style="width: 85%"></div></div>
+              </div>
+
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>JavaScript</span>
+                  <span class="skill-level">Proficient</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill" style="width: 80%"></div></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tools & Databases -->
+          <article class="skill-category-card reveal">
+            <div class="skill-card-head">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
+              </div>
+              <div>
+                <h3>Tools &amp; Databases</h3>
+                <p>Development &amp; database environment</p>
+              </div>
+            </div>
+
+            <div class="chip-grid">
+              <div class="tech-chip">
+                <span class="chip-dot"></span>
+                <div>
+                  <strong>Microsoft SQL Server</strong>
+                  <small>Relational DB &amp; Contexts</small>
+                </div>
+              </div>
+              <div class="tech-chip">
+                <span class="chip-dot"></span>
+                <div>
+                  <strong>SQL Server Management Studio</strong>
+                  <small>SSMS Administration &amp; Tuning</small>
+                </div>
+              </div>
+              <div class="tech-chip">
+                <span class="chip-dot"></span>
+                <div>
+                  <strong>Visual Studio</strong>
+                  <small>.NET IDE &amp; Debugging</small>
+                </div>
+              </div>
+              <div class="tech-chip">
+                <span class="chip-dot"></span>
+                <div>
+                  <strong>Visual Studio Code</strong>
+                  <small>Frontend &amp; Scripting</small>
+                </div>
+              </div>
+              <div class="tech-chip">
+                <span class="chip-dot"></span>
+                <div>
+                  <strong>Git &amp; GitHub</strong>
+                  <small>Version Control &amp; Collaboration</small>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Professional Skills & Certifications -->
+          <article class="skill-category-card reveal">
+            <div class="skill-card-head">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3>Professional &amp; Certifications</h3>
+                <p>Workplace strengths &amp; credentials</p>
+              </div>
+            </div>
+
+            <div class="tag-cloud">
+              <span class="soft-tag">Problem Solving</span>
+              <span class="soft-tag">Critical Thinking</span>
+              <span class="soft-tag">Legacy Code Refactoring</span>
+              <span class="soft-tag">Adaptive Learning</span>
+              <span class="soft-tag">Communication</span>
+              <span class="soft-tag">Management Skills</span>
+              <span class="soft-tag">Leadership</span>
+            </div>
+
+            <div class="cert-list">
+              <h4>Verified Certifications</h4>
+              <div class="cert-item">
+                <span class="cert-badge">NPTEL</span>
+                <span>Online Course on Database Management System</span>
+              </div>
+              <div class="cert-item">
+                <span class="cert-badge">Coursera</span>
+                <span>Course on Cloud Computing Fundamentals</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Experience & Education Timeline -->
+        <div class="timeline-wrapper reveal">
+          <div class="timeline-col">
+            <h3 class="timeline-heading">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+              <span>Work Experience</span>
+            </h3>
+
+            <div class="timeline-list">
+              <div class="timeline-card">
+                <div class="timeline-meta">
+                  <span class="timeline-date">Feb 2025 &ndash; Present</span>
+                  <span class="timeline-company">Techzera Infologics Pvt Ltd</span>
+                </div>
+                <h4>Junior Software Developer</h4>
+                <p>
+                  Collaborating closely with stakeholders to design and deploy custom Point of Sale (POS) and billing
+                  software solutions. Maintaining and migrating legacy codebases to modern .NET frameworks while
+                  troubleshooting complex backend controller and database context logic to ensure data integrity.
+                </p>
+              </div>
+
+              <div class="timeline-card">
+                <div class="timeline-meta">
+                  <span class="timeline-date">Dec 2024 &ndash; Feb 2025</span>
+                  <span class="timeline-company">Techzera Infologics Pvt Ltd</span>
+                </div>
+                <h4>Software Developer Trainee</h4>
+                <p>
+                  Designed and deployed custom Collection Box software tailored to streamline payment and collection
+                  workflows. Transitioned legacy modules to modern .NET frameworks and developed deep architectural
+                  ownership of the core software suite.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-col">
+            <h3 class="timeline-heading">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+              <span>Education</span>
+            </h3>
+
+            <div class="timeline-list">
+              <div class="timeline-card">
+                <div class="timeline-meta">
+                  <span class="timeline-date">2022 &ndash; 2024</span>
+                  <span class="timeline-company">Union Christian College, Aluva</span>
+                </div>
+                <h4>Master of Computer Applications (MCA)</h4>
+                <p>
+                  Completed postgraduate studies in software engineering, database systems, and machine learning.
+                  Built <em>Text-Guided Image Manipulation</em> and <em>Tour &amp; Travel Management</em> systems.
+                </p>
+              </div>
+
+              <div class="timeline-card">
+                <div class="timeline-meta">
+                  <span class="timeline-date">2019 &ndash; 2022</span>
+                  <span class="timeline-company">MES Kalladi College, Mannarkad</span>
+                </div>
+                <h4>Bachelor of Computer Applications (BCA)</h4>
+                <p>
+                  Strong foundation in programming, data structures, and relational databases. Built the
+                  <em>Safe Kerala</em> online job portal for workers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS SECTION ==================== -->
+    <section class="projects-section section" id="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Portfolio &amp; Systems</span>
+          <h2 class="section-title">Featured Projects &amp; Solutions</h2>
+          <p class="section-subtitle">
+            Real-world enterprise desktop/backend software delivered at Techzera Infologics alongside academic machine learning &amp; web applications.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="project-filters reveal" role="tablist" aria-label="Filter projects by category">
+          <button class="filter-btn active" data-filter="all" type="button">All Projects (6)</button>
+          <button class="filter-btn" data-filter="enterprise" type="button">Enterprise &amp; .NET (3)</button>
+          <button class="filter-btn" data-filter="academic" type="button">Web &amp; Machine Learning (3)</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Project 1 -->
+          <article class="project-card reveal" data-category="enterprise">
+            <div class="project-card-top">
+              <span class="project-badge badge-enterprise">Enterprise .NET</span>
+              <span class="project-org">Techzera Infologics</span>
+            </div>
+            <h3 class="project-title">Custom Point of Sale (POS) &amp; Billing Suite</h3>
+            <p class="project-desc">
+              Designed and deployed custom POS, invoicing, and accounting software tailored to stakeholder operational
+              workflows. Engineered backend controllers and SQL Server database contexts for accurate real-time billing
+              and financial data integrity.
+            </p>
+            <ul class="project-highlights">
+              <li>End-to-end billing, invoicing &amp; inventory workflows</li>
+              <li>Complex business logic debugging &amp; controller optimization</li>
+            </ul>
+            <div class="project-tags">
+              <span>C#</span>
+              <span>ASP.NET Core</span>
+              <span>SQL Server</span>
+              <span>POS Systems</span>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card reveal" data-category="enterprise">
+            <div class="project-card-top">
+              <span class="project-badge badge-enterprise">Financial Workflow</span>
+              <span class="project-org">Techzera Infologics</span>
+            </div>
+            <h3 class="project-title">Collection Box Payment &amp; Workflow Software</h3>
+            <p class="project-desc">
+              Architected and deployed custom Collection Box software designed to streamline daily payment collection,
+              reconciliation, and reporting workflows with high reliability and auditability.
+            </p>
+            <ul class="project-highlights">
+              <li>Streamlined payment &amp; receipt collection tracking</li>
+              <li>Built for daily operational stability and fast reconciliation</li>
+            </ul>
+            <div class="project-tags">
+              <span>C#</span>
+              <span>.NET Framework / Core</span>
+              <span>SQL Server</span>
+              <span>SSMS</span>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card reveal" data-category="enterprise">
+            <div class="project-card-top">
+              <span class="project-badge badge-enterprise">System Modernization</span>
+              <span class="project-org">Techzera Infologics</span>
+            </div>
+            <h3 class="project-title">Legacy .NET Codebase Migration &amp; Refactoring</h3>
+            <p class="project-desc">
+              Maintained and systematically transitioned legacy desktop and backend applications to modern .NET
+              frameworks, eliminating technical debt while boosting runtime performance and long-term scalability.
+            </p>
+            <ul class="project-highlights">
+              <li>Seamless migration to modern .NET architectures</li>
+              <li>Refactored database queries and controller layers</li>
+            </ul>
+            <div class="project-tags">
+              <span>.NET Migration</span>
+              <span>C# Refactoring</span>
+              <span>SQL Optimization</span>
+              <span>Visual Studio</span>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card reveal" data-category="academic">
+            <div class="project-card-top">
+              <span class="project-badge badge-academic">Machine Learning &bull; MCA</span>
+              <span class="project-org">UC College Aluva</span>
+            </div>
+            <h3 class="project-title">Text-Guided Image Manipulation</h3>
+            <p class="project-desc">
+              Machine learning application developed during MCA that empowers users to upload images and perform
+              semantic edits and visual transformations using natural-language text descriptions.
+            </p>
+            <ul class="project-highlights">
+              <li>Natural-language prompt-driven image editing</li>
+              <li>Applied deep learning &amp; computer vision techniques</li>
+            </ul>
+            <div class="project-tags">
+              <span>Machine Learning</span>
+              <span>Image Manipulation</span>
+              <span>NLP / Vision</span>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="project-card reveal" data-category="academic">
+            <div class="project-card-top">
+              <span class="project-badge badge-academic">Web Application &bull; MCA</span>
+              <span class="project-org">UC College Aluva</span>
+            </div>
+            <h3 class="project-title">Tour &amp; Travel Management Platform</h3>
+            <p class="project-desc">
+              Comprehensive trip-planning website featuring an integrated day-by-day itinerary builder, destination
+              catalog, and customizable travel add-ons for seamless vacation booking.
+            </p>
+            <ul class="project-highlights">
+              <li>Interactive itinerary planner with custom add-ons</li>
+              <li>Responsive frontend &amp; relational booking database</li>
+            </ul>
+            <div class="project-tags">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>SQL Database</span>
+            </div>
+          </article>
+
+          <!-- Project 6 -->
+          <article class="project-card reveal" data-category="academic">
+            <div class="project-card-top">
+              <span class="project-badge badge-academic">Web Portal &bull; BCA</span>
+              <span class="project-org">MES Kalladi College</span>
+            </div>
+            <h3 class="project-title">Safe Kerala &mdash; Online Job Portal for Workers</h3>
+            <p class="project-desc">
+              Dedicated employment platform connecting skilled and daily-wage workers across Kerala with verified local
+              employers, simplifying job discovery and worker hiring.
+            </p>
+            <ul class="project-highlights">
+              <li>Role-based worker profiles &amp; job listing management</li>
+              <li>Built to empower local workforce accessibility in Kerala</li>
+            </ul>
+            <div class="project-tags">
+              <span>Web Development</span>
+              <span>HTML / CSS / JS</span>
+              <span>SQL</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section class="services-section section" id="services">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">What I Offer</span>
+          <h2 class="section-title">Services &amp; Solutions</h2>
+          <p class="section-subtitle">
+            Transforming complex business requirements into clean, reliable, and scalable software systems.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3>Custom POS, Billing &amp; Desktop Software</h3>
+            <p>
+              End-to-end design and deployment of custom Point of Sale (POS), accounting, invoicing, and payment
+              collection systems tailored to your business operations.
+            </p>
+            <ul class="service-list">
+              <li>Custom billing &amp; collection box workflows</li>
+              <li>Fast, reliable desktop &amp; hybrid management suites</li>
+              <li>Stakeholder-driven feature customization</li>
+            </ul>
+          </article>
+
+          <!-- Service 2 -->
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3>.NET &amp; ASP.NET Core Backend Engineering</h3>
+            <p>
+              Building clean, maintainable, and scalable backend services, controllers, and business logic layers using
+              C# and modern ASP.NET Core architectures.
+            </p>
+            <ul class="service-list">
+              <li>Clean controller &amp; service layer architecture</li>
+              <li>Complex business rule implementation &amp; debugging</li>
+              <li>High data integrity &amp; error resilience</li>
+            </ul>
+          </article>
+
+          <!-- Service 3 -->
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="23 4 23 10 17 10"></polyline>
+                <polyline points="1 20 1 14 7 14"></polyline>
+                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+              </svg>
+            </div>
+            <h3>Legacy Codebase Migration &amp; Refactoring</h3>
+            <p>
+              Upgrading and refactoring older applications to modern .NET frameworks to improve runtime performance,
+              maintainability, and long-term operational stability.
+            </p>
+            <ul class="service-list">
+              <li>Systematic legacy-to-modern .NET transitions</li>
+              <li>Codebase cleanup &amp; bug resolution</li>
+              <li>Zero-disruption incremental upgrades</li>
+            </ul>
+          </article>
+
+          <!-- Service 4 -->
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+              </svg>
+            </div>
+            <h3>SQL Server Database Design &amp; Tuning</h3>
+            <p>
+              Structuring relational schemas, writing optimized queries, and managing database contexts in Microsoft
+              SQL Server and SSMS for mission-critical financial data.
+            </p>
+            <ul class="service-list">
+              <li>Relational schema &amp; stored procedure design</li>
+              <li>Data consistency &amp; transaction integrity</li>
+              <li>Responsive web portals with SQL backends</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT US SECTION ==================== -->
+    <section class="contact-section section" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Contact Us</span>
+          <h2 class="section-title">Let's Work Together</h2>
+          <p class="section-subtitle">
+            Looking for a dedicated .NET developer or custom software solution? Reach out directly via phone, email, or the form below.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Contact Details -->
+          <div class="contact-info-panel reveal">
+            <h3>Direct Contact Information</h3>
+            <p class="contact-intro">
+              I'm currently based in Kerala, India and open to software development roles, backend engineering
+              opportunities, and custom .NET / POS software collaborations.
+            </p>
+
+            <div class="contact-cards">
+              <div class="contact-item-card">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div class="contact-item-body">
+                  <span class="contact-label">Phone / WhatsApp</span>
+                  <a href="tel:+919072154032" class="contact-value">+91 9072154032</a>
+                </div>
+                <button class="copy-btn" type="button" data-copy="+91 9072154032" title="Copy phone number">Copy</button>
+              </div>
+
+              <div class="contact-item-card">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="contact-item-body">
+                  <span class="contact-label">Email Address</span>
+                  <a href="mailto:murshyd7@gmail.com" class="contact-value">murshyd7@gmail.com</a>
+                </div>
+                <button class="copy-btn" type="button" data-copy="murshyd7@gmail.com" title="Copy email address">Copy</button>
+              </div>
+
+              <div class="contact-item-card">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </div>
+                <div class="contact-item-body">
+                  <span class="contact-label">LinkedIn Profile</span>
+                  <a href="https://www.linkedin.com/in/murshid-" target="_blank" rel="noopener" class="contact-value">linkedin.com/in/murshid-</a>
+                </div>
+              </div>
+
+              <div class="contact-item-card">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                </div>
+                <div class="contact-item-body">
+                  <span class="contact-label">GitHub Profile</span>
+                  <a href="https://github.com/Murshyd10" target="_blank" rel="noopener" class="contact-value">github.com/Murshyd10</a>
+                </div>
+              </div>
+
+              <div class="contact-item-card">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="contact-item-body">
+                  <span class="contact-label">Location</span>
+                  <span class="contact-value">Pattambi, Palakkad, Kerala, India &ndash; 679303</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="languages-box">
+              <span class="languages-label">Languages Spoken:</span>
+              <div class="lang-pills">
+                <span>English</span>
+                <span>Malayalam</span>
+                <span>Hindi</span>
+                <span>Tamil</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Contact Form -->
+          <div class="contact-form-panel reveal">
+            <h3>Send a Message</h3>
+            <p class="form-subtext">Fill out the details below and choose whether to send via Email or WhatsApp.</p>
+
+            <form id="contactForm" class="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="senderName">Your Name <span class="req">*</span></label>
+                  <input type="text" id="senderName" name="name" placeholder="e.g. Rahul Menon" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="senderEmail">Your Email <span class="req">*</span></label>
+                  <input type="email" id="senderEmail" name="email" placeholder="e.g. rahul@company.com" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="senderSubject">Subject <span class="req">*</span></label>
+                <input type="text" id="senderSubject" name="subject" placeholder="e.g. .NET Developer Role / Custom Billing Software Inquiry" required />
+              </div>
+
+              <div class="form-group">
+                <label for="senderMessage">Message <span class="req">*</span></label>
+                <textarea id="senderMessage" name="message" rows="4" placeholder="Hi Murshid, I'd love to discuss a project or opportunity with you..." required></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn-full">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                  <span>Send Message via Email</span>
+                </button>
+                <button type="button" id="whatsappBtn" class="btn btn-secondary btn-full">
+                  <span>Send via WhatsApp</span>
+                </button>
+              </div>
+
+              <div id="formFeedback" class="form-feedback" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark">M</span>
+        <div>
+          <strong>Murshid</strong>
+          <p>Junior Software Developer &bull; C# / .NET / SQL Server</p>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <p class="footer-copy">&copy; <span id="currentYear">2026</span> Murshid. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
