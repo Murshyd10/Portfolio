@@ -125,21 +125,53 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
+    contactForm.addEventListener("submit", async (e) => {
       e.preventDefault();
       const values = getFormValues();
       if (!validateForm(values)) return;
 
-      const mailtoSubject = encodeURIComponent(`[Portfolio Inquiry] ${values.subject}`);
-      const mailtoBody = encodeURIComponent(
-        `Hi Murshid,\n\n${values.message}\n\n---\nFrom: ${values.name}\nEmail: ${values.email}`
-      );
+      const submitBtn = document.getElementById("submitEmailBtn");
+      const submitBtnText = document.getElementById("submitBtnText");
+      if (submitBtn) submitBtn.disabled = true;
+      if (submitBtnText) submitBtnText.textContent = "Sending...";
+      formFeedback.textContent = "Sending your message to Murshid...";
+      formFeedback.className = "form-feedback";
 
-      formFeedback.textContent = `Thanks, ${values.name}! Your message is ready—opening your email client to murshyd7@gmail.com.`;
-      formFeedback.className = "form-feedback success";
+      try {
+        const response = await fetch("https://formsubmit.co/ajax/murshyd7@gmail.com", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name: values.name,
+            email: values.email,
+            _replyto: values.email,
+            _subject: `[Portfolio Inquiry] ${values.subject}`,
+            subject: values.subject,
+            message: values.message,
+            _captcha: "false",
+            _template: "table",
+          }),
+        });
 
-      window.location.href = `mailto:murshyd7@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
-      contactForm.reset();
+        const result = await response.json().catch(() => ({}));
+
+        if (response.ok && (result.success === "true" || result.success === true)) {
+          formFeedback.textContent = `Thank you, ${values.name}! Your message has been sent directly to murshyd7@gmail.com.`;
+          formFeedback.className = "form-feedback success";
+          contactForm.reset();
+        } else {
+          // If first-time FormSubmit activation is required, submit the standard form
+          contactForm.submit();
+        }
+      } catch {
+        contactForm.submit();
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+        if (submitBtnText) submitBtnText.textContent = "Send Message";
+      }
     });
   }
 
