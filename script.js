@@ -163,11 +163,29 @@ document.addEventListener("DOMContentLoaded", () => {
           formFeedback.className = "form-feedback success";
           contactForm.reset();
         } else {
-          // If first-time FormSubmit activation is required, submit the standard form
-          contactForm.submit();
+          // Fallback: Open Gmail Web Compose directly in browser with pre-filled details
+          const subjectEnc = encodeURIComponent(`[Portfolio Inquiry] ${values.subject}`);
+          const bodyEnc = encodeURIComponent(
+            `Hi Murshid,\n\n${values.message}\n\n---\nFrom: ${values.name}\nEmail: ${values.email}`
+          );
+          const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=murshyd7@gmail.com&su=${subjectEnc}&body=${bodyEnc}`;
+          window.open(gmailUrl, "_blank", "noopener");
+
+          formFeedback.textContent = `Opening Gmail to send your message directly to murshyd7@gmail.com!`;
+          formFeedback.className = "form-feedback success";
+          contactForm.reset();
         }
       } catch {
-        contactForm.submit();
+        const subjectEnc = encodeURIComponent(`[Portfolio Inquiry] ${values.subject}`);
+        const bodyEnc = encodeURIComponent(
+          `Hi Murshid,\n\n${values.message}\n\n---\nFrom: ${values.name}\nEmail: ${values.email}`
+        );
+        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=murshyd7@gmail.com&su=${subjectEnc}&body=${bodyEnc}`;
+        window.open(gmailUrl, "_blank", "noopener");
+
+        formFeedback.textContent = `Opening Gmail to send your message directly to murshyd7@gmail.com!`;
+        formFeedback.className = "form-feedback success";
+        contactForm.reset();
       } finally {
         if (submitBtn) submitBtn.disabled = false;
         if (submitBtnText) submitBtnText.textContent = "Send Message";
