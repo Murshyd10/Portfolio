@@ -147,7 +147,27 @@ document.addEventListener("DOMContentLoaded", () => {
         _template: "table",
       });
 
-      // Send asynchronously in background so slow third-party servers never freeze the UI
+      // 1. Deliver instant real-time notification to Murshid's live portfolio inbox (ntfy.sh)
+      const replyUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+        values.email
+      )}&su=${encodeURIComponent("Re: " + values.subject)}`;
+
+      try {
+        await fetch("https://ntfy.sh/murshid_portfolio_inbox_7215", {
+          method: "POST",
+          headers: {
+            Title: `New Portfolio Inquiry: ${values.subject}`,
+            Priority: "high",
+            Tags: "incoming_envelope,briefcase",
+            Click: replyUrl,
+          },
+          body: `From: ${values.name}\nEmail: ${values.email}\nSubject: ${values.subject}\n\nMessage:\n${values.message}`,
+        });
+      } catch {
+        // Ignore network errors and proceed with fallback
+      }
+
+      // 2. Also fire background email delivery via FormSubmit
       fetch("https://formsubmit.co/ajax/f2af7f4416463ea57b9e50e2245d9837", {
         method: "POST",
         keepalive: true,
@@ -167,8 +187,6 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         body: payload,
       }).catch(() => {});
-
-      await new Promise((resolve) => setTimeout(resolve, 600));
 
       formFeedback.textContent = `✓ Message Sent Successfully! Thank you, ${values.name} — Murshid will get back to you soon.`;
       formFeedback.className = "form-feedback success";
