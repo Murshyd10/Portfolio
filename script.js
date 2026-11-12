@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const projectCards = document.querySelectorAll(".project-card");
   const copyBtns = document.querySelectorAll(".copy-btn");
   const contactForm = document.getElementById("contactForm");
-  const whatsappBtn = document.getElementById("whatsappBtn");
   const formFeedback = document.getElementById("formFeedback");
   const yearEl = document.getElementById("currentYear");
 
@@ -190,20 +189,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (submitBtn) submitBtn.disabled = false;
         if (submitBtnText) submitBtnText.textContent = "Send Message";
       }
-    });
-  }
-
-  if (whatsappBtn) {
-    whatsappBtn.addEventListener("click", () => {
-      const values = getFormValues();
-      if (!validateForm(values)) return;
-
-      const text = encodeURIComponent(
-        `Hi Murshid, I'm *${values.name}* (${values.email}).\n*Subject:* ${values.subject}\n\n${values.message}`
-      );
-      formFeedback.textContent = `Opening WhatsApp chat with +91 9072154032...`;
-      formFeedback.className = "form-feedback success";
-      window.open(`https://wa.me/919072154032?text=${text}`, "_blank", "noopener");
     });
   }
 });
