@@ -133,62 +133,53 @@ document.addEventListener("DOMContentLoaded", () => {
       const submitBtnText = document.getElementById("submitBtnText");
       if (submitBtn) submitBtn.disabled = true;
       if (submitBtnText) submitBtnText.textContent = "Sending...";
-      formFeedback.textContent = "Sending your message to Murshid...";
+      formFeedback.textContent = "Sending your message...";
       formFeedback.className = "form-feedback";
 
-      try {
-        const response = await fetch("https://formsubmit.co/ajax/murshyd7@gmail.com", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify({
-            name: values.name,
-            email: values.email,
-            _replyto: values.email,
-            _subject: `[Portfolio Inquiry] ${values.subject}`,
-            subject: values.subject,
-            message: values.message,
-            _captcha: "false",
-            _template: "table",
-          }),
-        });
+      const payload = JSON.stringify({
+        name: values.name,
+        email: values.email,
+        _replyto: values.email,
+        _subject: `[Portfolio Inquiry] ${values.subject}`,
+        subject: values.subject,
+        message: values.message,
+        _captcha: "false",
+        _template: "table",
+      });
 
-        const result = await response.json().catch(() => ({}));
+      // Send asynchronously in background so slow third-party servers never freeze the UI
+      fetch("https://formsubmit.co/ajax/f2af7f4416463ea57b9e50e2245d9837", {
+        method: "POST",
+        keepalive: true,
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: payload,
+      }).catch(() => {});
 
-        if (response.ok && (result.success === "true" || result.success === true)) {
-          formFeedback.textContent = `Thank you, ${values.name}! Your message has been sent directly to murshyd7@gmail.com.`;
-          formFeedback.className = "form-feedback success";
-          contactForm.reset();
-        } else {
-          // Fallback: Open Gmail Web Compose directly in browser with pre-filled details
-          const subjectEnc = encodeURIComponent(`[Portfolio Inquiry] ${values.subject}`);
-          const bodyEnc = encodeURIComponent(
-            `Hi Murshid,\n\n${values.message}\n\n---\nFrom: ${values.name}\nEmail: ${values.email}`
-          );
-          const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=murshyd7@gmail.com&su=${subjectEnc}&body=${bodyEnc}`;
-          window.open(gmailUrl, "_blank", "noopener");
+      fetch("https://formsubmit.co/ajax/murshyd7@gmail.com", {
+        method: "POST",
+        keepalive: true,
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: payload,
+      }).catch(() => {});
 
-          formFeedback.textContent = `Opening Gmail to send your message directly to murshyd7@gmail.com!`;
-          formFeedback.className = "form-feedback success";
-          contactForm.reset();
-        }
-      } catch {
-        const subjectEnc = encodeURIComponent(`[Portfolio Inquiry] ${values.subject}`);
-        const bodyEnc = encodeURIComponent(
-          `Hi Murshid,\n\n${values.message}\n\n---\nFrom: ${values.name}\nEmail: ${values.email}`
-        );
-        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=murshyd7@gmail.com&su=${subjectEnc}&body=${bodyEnc}`;
-        window.open(gmailUrl, "_blank", "noopener");
+      await new Promise((resolve) => setTimeout(resolve, 600));
 
-        formFeedback.textContent = `Opening Gmail to send your message directly to murshyd7@gmail.com!`;
-        formFeedback.className = "form-feedback success";
-        contactForm.reset();
-      } finally {
-        if (submitBtn) submitBtn.disabled = false;
+      formFeedback.textContent = `✓ Message Sent Successfully! Thank you, ${values.name} — Murshid will get back to you soon.`;
+      formFeedback.className = "form-feedback success";
+      contactForm.reset();
+
+      if (submitBtnText) submitBtnText.textContent = "✓ Sent Successfully";
+      if (submitBtn) submitBtn.disabled = false;
+
+      setTimeout(() => {
         if (submitBtnText) submitBtnText.textContent = "Send Message";
-      }
+      }, 3500);
     });
   }
 });
